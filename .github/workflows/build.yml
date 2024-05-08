@@ -14,7 +14,7 @@ on:
 
 jobs:
     build:
-# this is for building binaries for all three OS's
+# This section is for building binaries for all three OSs. Switching to just Ubuntu for now.
 #        runs-on: ${{ matrix.os }}
 #        strategy:
 #            matrix:
