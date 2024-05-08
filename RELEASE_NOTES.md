@@ -1,3 +1,7 @@
+# Robert's notes on his changes
+
+- none so far!
+
 # WebGoat release notes
 
 ## Version 2023.8
