@@ -1,4 +1,4 @@
-name: "Main / Branches / Pull requests build"
+name: Main / Branches / Pull requests build
 on:
     pull_request:
         paths-ignore:
