@@ -53,5 +53,6 @@ jobs:
                 env:
                     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
                     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+                run: mvn spotless:apply
                 run: mvn --no-transfer-progress verify -B org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=rcurlee-sonar_WebGoat_03bf3ac3-9d79-4e12-872b-d7148697f0fe -Dsonar.projectName='WebGoat'
                 
