@@ -1,4 +1,4 @@
-name: Run Maven Spotless
+name: Run and Apply Maven Spotless
 
 on:
   workflow_dispatch:
@@ -7,4 +7,17 @@ jobs:
   run-maven-spotless:
     runs-on: ubuntu-latest
     steps:
-      - run: mvn spotless:apply
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+          architecture: x64
+      - name: Cache Maven packages
+        uses: actions/cache@v4.0.0
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2-
+      - name: Run Spotless and Apply
+        run: mvn spotless:apply
