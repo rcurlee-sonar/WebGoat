@@ -1,0 +1,10 @@
+name: Run Maven Spotless
+
+on:
+  workflow_call:
+
+jobs:
+  run-maven-spotless:
+    runs-on: ubuntu-latest
+    steps:
+      - run: mvn spotless:apply
