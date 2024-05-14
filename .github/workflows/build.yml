@@ -1,4 +1,4 @@
-name: Main / Branches / Pull requests build
+name: Build main/branches/pull requests with SonarQube analysis
 on:
     pull_request:
         paths-ignore:
